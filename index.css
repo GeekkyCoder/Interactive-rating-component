@@ -2,7 +2,6 @@
 
 body {
   background-color: hsl(216, 12%, 8%);
-  color: #d3d8db;
   font-size: 1rem;
   margin: 0;
   padding: 0;
@@ -16,15 +15,16 @@ h1 {
   font-weight: bold;
   margin-top: 1em;
   margin-bottom: 0.5em;
+  color: hsl(0, 0%, 100%);
 }
 
 p {
   color: hsl(217, 12%, 63%);
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 400;
   margin-top: 0.5em;
-  line-height: 20px;
-  margin-bottom: 2em;
+  line-height: 1.5;
+  margin-bottom: 1.3em;
 }
 
 /* Layout  */
@@ -48,7 +48,7 @@ p {
   flex-direction: column;
   align-items: flex-start;
   background-color: #1f2630;
-  border-radius: 25px;
+  border-radius: 20px;
   min-width: 300px;
 }
 
@@ -60,7 +60,6 @@ p {
   width: 40px;
   height: 40px;
   border-radius: 40px;
-  background-color: #19202a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,10 +68,16 @@ p {
   width: 18px;
 }
 
+.logo,
+.ratings-btn {
+  background-color: hsl(213, 19%, 18%);
+}
+
 .ratings {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin-bottom: 0.4em;
 }
 
 .ratings-btn {
@@ -82,7 +87,6 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #19202a;
   color: hsl(216, 12%, 54%);
   font-weight: 700;
   transition: background-color 250ms;
@@ -90,8 +94,17 @@ p {
 
 .ratings-btn:hover {
   cursor: pointer;
-  background-color: hsl(105, 82%, 65%);
-  color: #2b283a;
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+}
+
+.bg-color {
+  background-color: #d8cefe;
+}
+
+.btn,
+.ratings-btn {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 .btn {
@@ -109,7 +122,12 @@ p {
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
+  color: hsl(0, 0%, 100%);
   transition: color 250ms;
+}
+
+#submitBtn:disabled {
+  cursor: not-allowed;
 }
 
 .btn-primary:hover {
